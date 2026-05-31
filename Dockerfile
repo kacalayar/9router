@@ -15,6 +15,5 @@ COPY --from=builder /app/src/mitm ./src/mitm
 COPY --from=builder /app/node_modules/node-forge ./node_modules/node-forge
 COPY --from=builder /app/node_modules/next ./node_modules/next
 
-USER node
 EXPOSE 20128
 CMD ["node", "server.js"]
